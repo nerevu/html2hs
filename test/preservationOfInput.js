@@ -52,10 +52,10 @@ m("table.sample-html", [
 ])`;
 
 testCase(function (test) {
-    test.equal(html2hs('<div><!-- comment body --></div>'), 'm("div", /* comment body */)', 'preserve comments');
-    test.equal(html2hs("<div>\n\n</div>"), "m(\"div\", [\n\n])", 'preserve newlines');
-    test.equal(html2hs("<div>\n  <span></span>  \n</div>"), "m(\"div\", [\n  m(\"span\")  \n])", 'preserve indentation and whitespace');
-    test.equal(html2hs("<div>\n  Some Text  \n</div>"), "m(\"div\", [\n  \"Some Text\"\n])", 'trim whitespace around text but preserve indent');
-    test.equal(html2hs(html), hs, 'only use brackets when necessary');
-    test.end();
+  test.equal(html2hs('<div><!-- comment body --></div>'), 'm("div", /* comment body */)', 'preserve comments');
+  test.equal(html2hs("<div>\n\n</div>"), "m(\"div\", [\n\n])", 'preserve newlines');
+  test.equal(html2hs("<div>\n  <span></span>  \n</div>"), "m(\"div\", [\n  m(\"span\")  \n])", 'preserve indentation and whitespace');
+  test.equal(html2hs("<div>\n  Some Text  \n</div>"), "m(\"div\", [\n  \"Some Text\"\n])", 'trim whitespace around text but preserve indent');
+  test.equal(html2hs(html), hs, 'only use brackets when necessary');
+  test.end();
 });
