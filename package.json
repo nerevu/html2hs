@@ -1,10 +1,17 @@
 {
   "name": "html2hyperscript",
-  "version": "0.0.0",
+  "version": "1.0.1",
   "description": "Convert legacy HTML to Hyperscript (https://github.com/dominictarr/hyperscript)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unframework/html2hyperscript.git"
+  },
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tap ./test"
+  },
+  "bin": {
+    "html2hyperscript": "./commandline.js"
   },
   "author": "Nick Matantsev <nick.m@myplanet.io>",
   "license": "MIT",
@@ -12,6 +19,7 @@
     "htmlparser2": "~3.8.2"
   },
   "devDependencies": {
-    "browserify": "~8.1.1"
+    "hyperscript": "~1.4.4",
+    "tap": "~0.7.1"
   }
 }
