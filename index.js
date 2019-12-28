@@ -81,7 +81,6 @@ function html2hs(inputMarkup) {
         } else {
           var opening = ", ";
           var closing = "";
-
         }
 
         var attribs = element[1];
@@ -118,11 +117,7 @@ function html2hs(inputMarkup) {
               indent +
               "}"
             : "") +
-          (elementContent.length
-            ? opening +
-              elementContent +
-              closing
-            : "") +
+          (elementContent.length ? opening + elementContent + closing : "") +
           ")";
 
         currentItemList.add(item);

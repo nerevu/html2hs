@@ -20,8 +20,8 @@ read(args._, function(err, res) {
   res.successes.forEach(function(file) {
     try {
       var out = html2hs(file.data);
-        process.stdout.write(out);
-        process.stdout.write("\n");
+      process.stdout.write(out);
+      process.stdout.write("\n");
     } catch (err) {
       if (!err.html2hs) {
         console.error(err.message);
