@@ -78,6 +78,15 @@ function html2hs(inputMarkup) {
 
         var indent = currentItemList.indent;
 
+        if (elementContent.indexOf("\n") !== -1) {
+          var opening = ", [";
+          var closing = "]";
+        } else {
+          var opening = ", ";
+          var closing = "";
+
+        }
+
         var attribs = element[1];
 
         var id = attribs["id"];
@@ -113,11 +122,9 @@ function html2hs(inputMarkup) {
               "}"
             : "") +
           (elementContent.length
-            ? ", [" +
-              (elementContent[0] === "\n" ? "" : " ") +
+            ? opening +
               elementContent +
-              (elementContent.match(/\s$/) ? "" : " ") +
-              "]"
+              closing
             : "") +
           ")";
 
