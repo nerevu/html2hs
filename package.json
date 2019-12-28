@@ -1,25 +1,34 @@
 {
-  "name": "html2hyperscript",
+  "name": "html2hs",
   "version": "1.0.1",
-  "description": "Convert legacy HTML to Hyperscript (https://github.com/dominictarr/hyperscript)",
+  "description": "Convert HTML to Mithriljs flavored Hyperscript",
   "repository": {
     "type": "git",
-    "url": "https://github.com/unframework/html2hyperscript.git"
+    "url": "https://github.com/nerevu/html2hyperscript.git"
   },
   "main": "index.js",
   "scripts": {
-    "test": "tap ./test"
+    "prettify": "prettier --write '*.js' && prettier --write 'bin/html2hs'",
+    "test": "tap ./test",
+    "watch:js": "onchange '*.js' -- prettier --write {{changed}}",
+    "watch:bin": "onchange 'bin/html2hs' -- prettier --write {{changed}}",
+    "watch": "npm run watch:js && npm run watch:bin"
   },
   "bin": {
-    "html2hyperscript": "./commandline.js"
+    "html2hs": "./bin/html2hs"
   },
-  "author": "Nick Matantsev <nick.m@myplanet.io>",
+  "author": "Reuben Cummings <rcummings@nerevu.com>",
   "license": "MIT",
   "dependencies": {
-    "htmlparser2": "~3.8.2"
+    "htmlparser2": "~3.8.2",
+    "read-input": "^0.3.1"
   },
   "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.2",
     "hyperscript": "~1.4.4",
-    "tap": "~0.7.1"
+    "prettier": "^1.14.2",
+    "tap": "^14.10.5"
   }
 }
