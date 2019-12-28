@@ -1,0 +1,9 @@
+Usage:
+    $0 FILES [options]
+
+Options:
+    -V, --verbose      prints more stuff
+
+Other options:
+    -h, --help         print usage information
+    -v, --version      show version info and exit
