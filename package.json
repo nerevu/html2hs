@@ -4,7 +4,7 @@
   "description": "Convert HTML to Mithriljs flavored Hyperscript",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nerevu/html2hyperscript.git"
+    "url": "https://github.com/nerevu/html2hs.git"
   },
   "main": "index.js",
   "scripts": {

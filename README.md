@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/unframework/html2hyperscript.svg?branch=master)](https://travis-ci.org/unframework/html2hyperscript)
+[![Build Status](https://travis-ci.org/nerevu/html2hs.svg?branch=master)](https://travis-ci.org/unframework/html2hs)
 
 # Convert Legacy HTML to Hyperscript
 
@@ -7,8 +7,8 @@ Automatically translate old HTML markup into the new Hyperscript markup embeddab
 Use this for hand-converting legacy project source code (e.g. AngularJS templates): care is taken to preserve original whitespace and even comments. For dynamic serving and CI builds check out https://github.com/alexmingoia/jsx-transform instead.
 
 ```
-npm install -g html2hyperscript
-html2hyperscript legacy_markup_file.html > shiny_new_syntax.js
+npm install -g html2hs
+html2hs legacy_markup_file.html > shiny_new_syntax.js
 ```
 
 See Hyperscript library: https://github.com/dominictarr/hyperscript
@@ -45,31 +45,26 @@ HTML goes in:
 Hyperscript-like JS syntax comes out:
 
 ```js
-h("table.sample-html", [
-  h("tr", [
-    h("th", [ "Pandas" ]),
-    h("th", [ "Kittens" ]),
-    h("th", [ "Hedgehogs" ])
+m("table.sample-html", [
+  m("tr", [
+    m("th", "Pandas"),
+    m("th", "Kittens"),
+    m("th", "Hedgehogs")
   ]),
-  h("tr", [
-    h("td", [ "foo" ]),
-    h("td", [ "bar" ]),
-    h("td", [ "baz" ])
+  m("tr", [
+    m("td", "foo"),
+    m("td", "bar"),
+    m("td", "baz")
   ]),
-  h("tr", [
-    h("td", [ "32" ]),
-    h("td", [ "45" ]),
-    h("td", [ "83" ])
+  m("tr", [
+    m("td", "32"),
+    m("td", "45"),
+    m("td", "83")
   ]),
-  h("tr", [
-    h("td", [ "onomatopoeia" ]),
-    h("td", [ "schadenfreude" ]),
-    h("td", [ "antidisestablishmentarianism" ])
+  m("tr", [
+    m("td", "onomatopoeia"),
+    m("td", "schadenfreude"),
+    m("td", "antidisestablishmentarianism")
   ])
 ])
 ```
-
-## TODO
-
-- some tests
-
