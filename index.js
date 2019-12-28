@@ -20,18 +20,15 @@ ItemList.prototype.addSpace = function(space) {
   }
 };
 
-ItemList.prototype.add = function(data, ignoreComma) {
-  if (!ignoreComma) {
-    if (!this.isFirstItem) {
-      this.content += this.spacer.length ? "," : ", ";
-    }
-
-    this.isFirstItem = false;
+ItemList.prototype.add = function(data) {
+  if (!this.isFirstItem) {
+    this.content += this.spacer.length ? "," : ", ";
   }
+
+  this.isFirstItem = false;
 
   this.content += this.spacer;
   this.spacer = "";
-
   this.content += data;
 };
 
@@ -131,7 +128,7 @@ function html2hs(inputMarkup) {
         currentItemList.add(item);
       },
       oncomment: function(text) {
-        currentItemList.add("/*" + text + "*/", false); // @todo comment-safety
+        currentItemList.add("/*" + text + "*/"); // @todo comment-safety
       }
     },
     { decodeEntities: true }
