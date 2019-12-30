@@ -1,10 +1,10 @@
 {
-  "name": "html2hs",
+  "name": "@nerevu/html2hs",
   "version": "1.1.1",
   "description": "Convert HTML to Mithriljs flavored Hyperscript",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nerevu/html2hs.git"
+    "url": "git+https://github.com/nerevu/html2hs.git"
   },
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "watch": "npm run watch:js && npm run watch:bin"
   },
   "bin": {
-    "html2hs": "./bin/html2hs"
+    "html2hs": "bin/html2hs"
   },
   "author": "Reuben Cummings <rcummings@nerevu.com>",
   "license": "MIT",
@@ -30,5 +30,12 @@
     "hyperscript": "~1.4.4",
     "prettier": "^1.14.2",
     "tap": "^14.10.5"
+  },
+  "bugs": {
+    "url": "https://github.com/nerevu/html2hs/issues"
+  },
+  "homepage": "https://github.com/nerevu/html2hs#readme",
+  "directories": {
+    "test": "test"
   }
 }
