@@ -1,6 +1,6 @@
 {
   "name": "@nerevu/html2hs",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Convert HTML to Mithriljs flavored Hyperscript",
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   "license": "MIT",
   "dependencies": {
     "htmlparser2": "~3.8.2",
+    "minimist": "^1.2.0",
     "read-input": "^0.3.1"
   },
   "devDependencies": {
