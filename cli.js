@@ -1,3 +1,4 @@
+// https://github.com/js2coffee/js2coffee/blob/master/lib/cli.js
 /**
  * cli:
  * minimal command-line helper on top of minimist.

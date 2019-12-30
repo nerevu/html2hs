@@ -1,6 +1,6 @@
 {
   "name": "html2hs",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Convert HTML to Mithriljs flavored Hyperscript",
   "repository": {
     "type": "git",
