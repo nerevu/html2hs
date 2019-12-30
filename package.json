@@ -1,6 +1,6 @@
 {
   "name": "@nerevu/html2hs",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Convert HTML to Mithriljs flavored Hyperscript",
   "repository": {
     "type": "git",
